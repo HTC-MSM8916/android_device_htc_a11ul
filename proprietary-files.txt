@@ -41,11 +41,11 @@ vendor/lib/libthermalioctl.so
 # Perf
 bin/pnpmgr
 
-# Time services
--app/TimeService/TimeService.apk
-bin/time_daemon
-vendor/lib/libtime_genoff.so
-vendor/lib/libTimeService.so
+# Time services FIXME
+#-app/TimeService/TimeService.apk
+#bin/time_daemon
+#vendor/lib/libtime_genoff.so
+#vendor/lib/libTimeService.so
 
 # Widevine
 etc/firmware/widevine.b00
@@ -162,6 +162,12 @@ vendor/lib/libactuator_ov8825.so
 vendor/lib/libactuator_rohm_bu64243gwz_camcorder.so
 vendor/lib/libactuator_rohm_bu64243gwz_camera.so
 vendor/lib/libactuator_rohm_bu64243gwz.so
+vendor/lib/libchromatix_gc0339_common.so
+vendor/lib/libchromatix_gc0339_default_video.so
+vendor/lib/libchromatix_gc0339_liveshot.so
+vendor/lib/libchromatix_gc0339_preview.so
+vendor/lib/libchromatix_gc0339_snapshot.so
+vendor/lib/libchromatix_gc0339_zsl.so
 vendor/lib/libchromatix_imx132_common.so
 vendor/lib/libchromatix_imx132_default_video.so
 vendor/lib/libchromatix_imx132_liveshot.so
@@ -181,12 +187,6 @@ vendor/lib/libchromatix_imx135_hfr_90.so
 vendor/lib/libchromatix_imx135_preview.so
 vendor/lib/libchromatix_imx135_snapshot.so
 vendor/lib/libchromatix_imx135_video_hd.so
-vendor/lib/libchromatix_imx219_common.so
-vendor/lib/libchromatix_imx219_default_video.so
-vendor/lib/libchromatix_imx219_hd.so
-vendor/lib/libchromatix_imx219_liveshot.so
-vendor/lib/libchromatix_imx219_preview.so
-vendor/lib/libchromatix_imx219_snapshot.so
 vendor/lib/libchromatix_ov13850_common.so
 vendor/lib/libchromatix_ov13850_default_video.so
 vendor/lib/libchromatix_ov13850_hfr_60fps.so
@@ -311,36 +311,21 @@ vendor/lib/libchromatix_S5K4E1_13P1BA_preview.so
 vendor/lib/libchromatix_S5K4E1_13P1BA_snapshot.so
 vendor/lib/libchromatix_S5K4E1_13P1BA_video_hd.so
 vendor/lib/libchromatix_S5K4E1_13P1BA_zsl.so
-vendor/lib/libchromatix_s5k4h5_8916_common.so
-vendor/lib/libchromatix_s5k4h5_8916_default_video.so
-vendor/lib/libchromatix_s5k4h5_8916_hfr_120fps.so
-vendor/lib/libchromatix_s5k4h5_8916_hfr_60fps.so
-vendor/lib/libchromatix_s5k4h5_8916_hfr_90fps.so
-vendor/lib/libchromatix_s5k4h5_8916_liveshot.so
-vendor/lib/libchromatix_s5k4h5_8916_preview.so
-vendor/lib/libchromatix_s5k4h5_8916_snapshot.so
-vendor/lib/libchromatix_s5k4h5_8916_video_hd.so
-vendor/lib/libchromatix_s5k5e2_front_common.so
-vendor/lib/libchromatix_s5k5e2_front_default_video.so
-vendor/lib/libchromatix_s5k5e2_front_hfr_60fps.so
-vendor/lib/libchromatix_s5k5e2_front_hfr_90fps.so
-vendor/lib/libchromatix_s5k5e2_front_liveshot.so
-vendor/lib/libchromatix_s5k5e2_front_preview.so
-vendor/lib/libchromatix_s5k5e2_front_snapshot.so
-vendor/lib/libchromatix_s5k5e2_front_video_hd.so
-vendor/lib/libchromatix_s5k5e2_truly_common.so
-vendor/lib/libchromatix_s5k5e2_truly_default_video.so
-vendor/lib/libchromatix_s5k5e2_truly_hfr_120fps.so
-vendor/lib/libchromatix_s5k5e2_truly_hfr_60fps.so
-vendor/lib/libchromatix_s5k5e2_truly_hfr_90fps.so
-vendor/lib/libchromatix_s5k5e2_truly_liveshot.so
-vendor/lib/libchromatix_s5k5e2_truly_preview.so
-vendor/lib/libchromatix_s5k5e2_truly_snapshot.so
-vendor/lib/libchromatix_s5k5e2_truly_video_hd.so
+vendor/lib/libchromatix_s5k5e_common.so
+vendor/lib/libchromatix_s5k5e_default_video.so
+vendor/lib/libchromatix_s5k5e_fov65_common.so
+vendor/lib/libchromatix_s5k5e_fov65_default_video.so
+vendor/lib/libchromatix_s5k5e_fov65_hdr.so
+vendor/lib/libchromatix_s5k5e_fov65_preview.so
+vendor/lib/libchromatix_s5k5e_hdr.so
+vendor/lib/libchromatix_s5k5e_hfr_common.so
+vendor/lib/libchromatix_s5k5e_hfr.so
+vendor/lib/libchromatix_s5k5e_hfr_60fps.so
+vendor/lib/libchromatix_s5k5e_preview.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegehw.so
-vendor/lib/libmmcamera_cac_lib.so
 vendor/lib/libmmcamera_faceproc.so
+vendor/lib/libmmcamera_gc0339.so
 vendor/lib/libmmcamera_hdr_gb_lib.so
 vendor/lib/libmmcamera_hdr_lib.so
 vendor/lib/libmmcamera_hi256.so
@@ -348,12 +333,10 @@ vendor/lib/libmmcamera_imglib.so
 vendor/lib/libmmcamera_imx132.so
 vendor/lib/libmmcamera_imx134.so
 vendor/lib/libmmcamera_imx135.so
-vendor/lib/libmmcamera_imx219_eeprom.so
-vendor/lib/libmmcamera_imx219.so
 vendor/lib/libmmcamera_mt9m114.so
+vendor/lib/libmmcamera_mt9v113.so
 vendor/lib/libmmcamera_ofilm_oty5f03_eeprom.so
 vendor/lib/libmmcamera_ov13850.so
-vendor/lib/libmmcamera_ov2680_skuhf.so
 vendor/lib/libmmcamera_ov2680.so
 vendor/lib/libmmcamera_ov2680_5987fhq.so
 vendor/lib/libmmcamera_ov2720.so
@@ -378,13 +361,8 @@ vendor/lib/libmmcamera_sunny_q5v22e_eeprom.so
 vendor/lib/libmmcamera_sunny_q5v41b_eeprom.so
 vendor/lib/libmmcamera_sunny_q8v18a_eeprom.so
 vendor/lib/libmmcamera_s5k3l1yx.so
-vendor/lib/libmmcamera_S5K4E1_SKUHF.so
 vendor/lib/libmmcamera_S5K4E1_13P1BA.so
-vendor/lib/libmmcamera_s5k4h5_eeprom.so
-vendor/lib/libmmcamera_s5k4h5_8916.so
-vendor/lib/libmmcamera_s5k5e2_eeprom.so
-vendor/lib/libmmcamera_s5k5e2_front.so
-vendor/lib/libmmcamera_s5k5e2_truly.so
+vendor/lib/libmmcamera_s5k5e.so
 vendor/lib/libmmcamera_tintless_algo.so
 vendor/lib/libmmcamera_tintless_bg_pca_algo.so
 vendor/lib/libmmcamera_truly_cm7700_eeprom.so
