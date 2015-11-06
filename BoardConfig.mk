@@ -15,15 +15,15 @@
 
 -include device/htc/msm8916-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/htc/a31ul
+DEVICE_PATH := device/htc/a11ul
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 # Kernel
 ifneq ($(FORCE_32_BIT),true)
-TARGET_KERNEL_CONFIG := a31ul-64_defconfig
+TARGET_KERNEL_CONFIG := a11ul-64_defconfig
 else
-TARGET_KERNEL_CONFIG := a31ul_defconfig
+TARGET_KERNEL_CONFIG := a11ul_defconfig
 endif
 
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
@@ -61,7 +61,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 4429185024
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 BOARD_SEPOLICY_DIRS += \
-    device/htc/a31ul/sepolicy
+    device/htc/a11ul/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     file.te \
@@ -71,4 +71,4 @@ BOARD_SEPOLICY_UNION += \
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # inherit from the proprietary version
--include vendor/htc/a31ul/BoardConfigVendor.mk
+-include vendor/htc/a11ul/BoardConfigVendor.mk

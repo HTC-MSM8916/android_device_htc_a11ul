@@ -23,12 +23,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 endif
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from a31ul device
-$(call inherit-product, device/htc/a31ul/device.mk)
+# Inherit from a11ul device
+$(call inherit-product, device/htc/a11ul/device.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := a31ul
-PRODUCT_NAME := full_a31ul
+PRODUCT_DEVICE := a11ul
+PRODUCT_NAME := full_a11ul
 PRODUCT_BRAND := htc
-PRODUCT_MODEL := HTC Desire 620
+PRODUCT_MODEL := HTC Desire 510
 PRODUCT_MANUFACTURER := HTC
