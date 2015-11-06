@@ -536,6 +536,3 @@ vendor/lib/pp_proc_plugin.so
 vendor/lib/qnet-plugin.so
 vendor/lib/libsubsystem_control.so
 vendor/lib/libSubSystemShutdown.so
-
-# NFC
-vendor/firmware/libpn547_fw.so
