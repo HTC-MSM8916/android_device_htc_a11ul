@@ -8,7 +8,7 @@ persist.audio.fluence.speaker=true
 ro.config.always_show_roaming=true
 
 # Display
-ro.sf.lcd_density=320
+ro.sf.lcd_density=240
 
 # relax sensor fusion mag field filter
 ro.fusion.magfield.max=250
